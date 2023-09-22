@@ -10,9 +10,32 @@ body{
 header{
     display: flex;
     width: 100%;
-    border: 1px solid red;
 }
 
 .logo{
-    
+
+}
+
+.conteudo{
+    width: 700px;
+    height: 500px;
+    background: #0085C7;
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 30px;
+}
+
+article{
+    align-items: center;
+}
+
+.area_login{
+    align-items: center;
+    margin-top: 10px;
+}
+
+.area_login form label{
+align-items: center;
+
 }
