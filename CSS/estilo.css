@@ -26,16 +26,14 @@ header{
     border-radius: 30px;
 }
 
-article{
+.conteudo article .area_login, form{
     align-items: center;
+    margin: 10 300px;
+    border: 1px solid red;
 }
 
 .area_login{
-    align-items: center;
     margin-top: 10px;
+    align-items: top;
 }
 
-.area_login form label{
-align-items: center;
-
-}
