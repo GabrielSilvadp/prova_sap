@@ -15,9 +15,7 @@ header{
     background: #314659;
 }
 
-.logo{
 
-}
 
 .conteudo{
     width: 700px;
@@ -30,16 +28,16 @@ header{
 }
 
 .conteudo article .area_login, form{
-    align-items: center;
     margin: 10 300px;
+    border: 1px solid red;
 }
 
 .area_login{
     margin-top: 10px;
     align-items: top;
+    color: white;
+    text-align: center;
 }
 
-.espacamento{
-    margin-right: 1200px;
 
 }
