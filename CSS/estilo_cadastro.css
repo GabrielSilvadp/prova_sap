@@ -1,6 +1,7 @@
 .menu ul{
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
 
 .menu li{
@@ -25,7 +26,7 @@
 .conteudo-cadastro{
     display: flex;
     width: 89%;
-    height: 800px;
+    height: 89%;
     margin: auto;
     margin-top: 20px;
     border-radius: 60px;
@@ -33,16 +34,70 @@
 }
 
 article{
-    margin-top: 40px;
+    margin-top: 100px;
+    width: 89%;
+    height: 89%;
+
 }
+
+.area-cadastro{
+    margin-right: 300px;
+    width: 100%;
+}
+
 
 .area-cadastro label{
     color: white;
+    margin-bottom: 5px;
+    margin-top: 8px;
 }
 
 .area-cadastro input{
     float: inline-end;
     display: block;
-    width: 300px;
+    width: 280px;
+    height: 35px;
+    margin-top: 8px;
 }
 
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    padding: 4.5 30px;
+    border: none;
+    font-size: 0.8rem;
+}
+
+.input-box select{
+    margin: 0.6rem 0;
+    padding: 4.5 75px;
+    border: none;
+    width: 280px;
+    height: 35px;
+}
+
+.button{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+
+.button input{
+    width: 135px;
+    margin-right: 8px;
+    border-radius: 15px;
+}
+
+.cor input{
+    background: #009F3D;
+}
