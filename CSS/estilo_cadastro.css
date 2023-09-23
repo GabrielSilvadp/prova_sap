@@ -1,0 +1,49 @@
+.menu ul{
+    display: flex;
+    align-items: center;
+}
+
+.menu li{
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 80px;
+}
+
+.menu li a{
+    display: flex;
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Trebuchet MS";
+    background: white;
+    border-radius: 70px;
+    padding: 15 40px;
+    padding: auto;
+    text-transform: uppercase;  
+}
+
+.conteudo-cadastro{
+    display: flex;
+    width: 89%;
+    height: 800px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 60px;
+    background: #314659;
+}
+
+article{
+    margin-top: 40px;
+}
+
+.area-cadastro label{
+    color: white;
+}
+
+.area-cadastro input{
+    float: inline-end;
+    display: block;
+    width: 300px;
+    height: 50px;
+}
+
