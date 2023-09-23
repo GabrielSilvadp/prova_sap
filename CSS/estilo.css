@@ -12,9 +12,7 @@ header{
     width: 100%;
 }
 
-.logo{
 
-}
 
 .conteudo{
     width: 700px;
@@ -27,13 +25,30 @@ header{
 }
 
 .conteudo article .area_login, form{
-    align-items: center;
     margin: 10 300px;
-    border: 1px solid red;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding-left: 2%;
+    
+
 }
 
 .area_login{
     margin-top: 10px;
     align-items: top;
+    color: white;
+    text-align: center;
 }
-
+.conteiner{   
+    height: 50px;
+    padding: 25%;
+  text-align: center;
+  
+    
+}
+ 
+.btn{
+    background-color: green;
+    width: 80px;
+}
