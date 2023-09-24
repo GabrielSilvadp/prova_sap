@@ -35,24 +35,16 @@ VALUES
 (2, 'Fresa'),
 (3, 'Computador');
 
--- Terminar table relatório
+ALTER TABLE relatorios ADD COLUMN codRelEqui INT;
+ALTER TABLE relatorios ADD COLUMN codRelDef INT;
+
+ALTER TABLE relatorios ADD CONSTRAINT fk_equipamento FOREIGN KEY (codRelEqui) REFERENCES equipamento(codEqui);
+ALTER TABLE relatorios ADD CONSTRAINT fk_defeitos FOREIGN KEY (codRelDef) REFERENCES defeitos(codDef);  
+
 CREATE TABLE relatorios(
-	data DATETIME
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	data DATETIME,
+    horaInicial DATETIME,
+    horaFinal DATETIME,
+    tempoParado DATETIME
 );
-
-
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2017-01-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '1', '1',TO_DATETIME(' 0000-00-00 09:15:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 10:00:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2018-01-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '2', '2',TO_DATETIME(' 0000-00-00 13:50:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 15:00:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2019-01-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '1', '3',TO_DATETIME(' 0000-00-00 13:10:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 17:30:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2019-02-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '3', '4',TO_DATETIME(' 0000-00-00 08:00:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 09:15:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2016-01-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '2', '5',TO_DATETIME(' 0000-00-00 07:45:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 08:50:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2018-01-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '3', '6',TO_DATETIME(' 0000-00-00 07:50:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 11:00:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2019-01-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '1', '1',TO_DATETIME(' 0000-00-00 15:00:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 15:50:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2019-01-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '1', '1',TO_DATETIME(' 0000-00-00 16:00:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 17:00:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2019-03-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '1', '1',TO_DATETIME(' 0000-00-00 16:30:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 18:15:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2017-01-05 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '1', '1',TO_DATETIME(' 0000-00-00 09:00:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 15:15:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2017-02-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '1', '1',TO_DATETIME(' 0000-00-00 11:00:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 11:15:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2018-01-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '2', '2',TO_DATETIME(' 0000-00-00 09:45:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 10:45:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2017-01-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '2', '3',TO_DATETIME(' 0000-00-00 01:01:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 03:03:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2018-01-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '2', '2',TO_DATETIME(' 0000-00-00 09:15:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 22:45:00', 'YYYY/MM/DD HH:MM:SS');
-INSERT INTO defeitos (data, codEqui, codDef, horaInicial, horaFinal) VALUES (TO_DATETIME(' 2017-01-03 00:00:00', 'YYYY/MM/DD HH:MM:SS'), '3', '6',TO_DATETIME(' 0000-00-00 05:05:00', 'DD/MM/YYYY HH:MM:SS') , TO_DATETIME(' 0000-00-00 06:06:00', 'YYYY/MM/DD HH:MM:SS');
